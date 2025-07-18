@@ -1,0 +1,53 @@
+# _config.yml
+
+# Site settings
+title: Muhammad Adel Gabr
+description: "Machine Learning Engineer • Generative AI Specialist"
+email: MuhammadAdelGabr@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://MuhammadAdelGabr.github.io" # the base hostname & protocol for your site
+
+# Author & Social Links
+author:
+  name: Muhammad Adel Gabr
+  email: MuhammadAdelGabr@gmail.com
+  
+social:
+  linkedin: muhammad-adel-gabr
+  github: MuhammadAdelGabr
+  huggingface: MuhammadAdelGabr
+  # Add other social links here, like twitter: jekyllrb
+
+# Build settings
+markdown: kramdown
+theme: null # We are using a custom theme, so we disable the default.
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Plugins - jekyll-feed is a good default
+plugins:
+  - jekyll-feed
+
+# Exclude from processing
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# files' path in the `include:` list.
+#
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

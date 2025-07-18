@@ -1,0 +1,16 @@
+# _data/skills.yml
+
+- category: "Artificial Intelligence & Machine Learning"
+  items:
+    - "Generative AI & LLMs: LLM Fine-Tuning (PEFT, Quantization), RAG, Prompt Engineering, LangChain, LlamaIndex, Hugging Face."
+    - "Deep Learning & CV: PyTorch, TensorFlow, Keras, Computer Vision (OpenCV, Detectron2)."
+    - "Core ML & Data Science: Scikit-learn, Pandas, NumPy, Supervised & Unsupervised Learning, NLP."
+    - "MLOps: MLflow, Weights & Biases, DVC, Kubeflow, Airflow."
+
+- category: "Software Engineering & Infrastructure"
+  items:
+    - "Programming Languages: Python, Java, JavaScript/TypeScript, SQL."
+    - "Backend & API Development: FastAPI, Flask, Spring Boot, RESTful API Design."
+    - "Cloud Platforms: AWS (SageMaker, Bedrock), GCP (Vertex AI), Azure AI Studio."
+    - "DevOps & Containers: Docker, Kubernetes, CI/CD."
+    - "Databases & Tools: MongoDB, Elasticsearch, Redis, Apache Spark, Git/GitHub."

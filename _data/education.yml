@@ -1,0 +1,11 @@
+# _data/education.yml
+
+- degree: "Master of Computer Engineering (Artificial Intelligence)"
+  university: "Mansoura University"
+  period: "January 2025 - Present"
+  details: "Specializing in generative AI, transformer models, and multimodal learning. Pre-master GPA: 3.9/4.0."
+
+- degree: "Bachelor of Engineering"
+  university: "Mansoura University"
+  period: "2017 - 2022"
+  details: "Accumulative grade: 74%."
