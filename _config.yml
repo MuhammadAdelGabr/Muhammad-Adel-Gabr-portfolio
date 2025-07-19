@@ -1,53 +1,56 @@
-# _config.yml
+title: Muhammad Adel Gabr - AI Portfolio
+description: Machine Learning Engineer & Generative AI Specialist. Expert in LLM fine-tuning, RAG systems, and building scalable AI solutions.
+author: Muhammad Adel Gabr
+url: https://muhammadadelgabr.github.io
+baseurl: ""
 
-# Site settings
-title: Muhammad Adel Gabr
-description: "Machine Learning Engineer • Generative AI Specialist"
-email: MuhammadAdelGabr@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://MuhammadAdelGabr.github.io" # the base hostname & protocol for your site
+# SEO settings
+lang: en_US
+locale: en_US
 
-# Author & Social Links
-author:
-  name: Muhammad Adel Gabr
-  email: MuhammadAdelGabr@gmail.com
-  
+# Social media
 social:
-  linkedin: muhammad-adel-gabr
-  github: MuhammadAdelGabr
-  huggingface: MuhammadAdelGabr
-  # Add other social links here, like twitter: jekyllrb
+  name: Muhammad Adel Gabr
+  links:
+    - https://www.linkedin.com/in/muhammadadelgabr/
+    - https://github.com/muhammadadelgabr/
+    - https://www.huggingface.co/muhammadadelgabr/
 
-# Build settings
-markdown: kramdown
-theme: null # We are using a custom theme, so we disable the default.
-
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-
-# Plugins - jekyll-feed is a good default
+# GitHub Pages settings
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# files' path in the `include:` list.
-#
 exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
+  - README.md
   - Gemfile
   - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .DS_Store
+
+# Include files
+include:
+  - assets
+  - .htaccess
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Compression
+sass:
+  style: compressed
+
+# SEO and meta tags
+twitter:
+  username: muhammadadelgabr
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Theme (default GitHub Pages theme)
+theme: minima 

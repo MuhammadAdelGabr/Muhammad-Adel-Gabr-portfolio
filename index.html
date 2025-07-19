@@ -3,199 +3,680 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Adel Gabr - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-        .section-title {
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .card {
-            background-color: white;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .tag {
-            background-color: #e0e7ff;
-            color: #3730a3;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-    </style>
+    <meta name="description" content="Muhammad Adel Gabr - Machine Learning Engineer & Generative AI Specialist. Expert in LLM fine-tuning, RAG systems, and MLOps.">
+    <meta name="keywords" content="Machine Learning, AI, Generative AI, LLM, Deep Learning, Python, PyTorch">
+    <meta name="author" content="Muhammad Adel Gabr">
+    
+    <title>Muhammad Adel Gabr | ML Engineer & AI Specialist</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Muhammad Adel Gabr | ML Engineer & AI Specialist">
+    <meta property="og:description" content="Machine Learning Engineer specializing in Generative AI and LLM fine-tuning">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muhammadadelgabr.github.io">
+    <meta property="og:image" content="https://muhammadadelgabr.github.io/assets/images/og-image.png">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Muhammad Adel Gabr | ML Engineer & AI Specialist">
+    <meta name="twitter:description" content="Machine Learning Engineer specializing in Generative AI and LLM fine-tuning">
+    <meta name="twitter:image" content="https://muhammadadelgabr.github.io/assets/images/og-image.png">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="msapplication-TileColor" content="#0a0a0a">
 </head>
-<body class="antialiased">
-
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">Muhammad Adel Gabr</h1>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-                <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
-            </nav>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="ai-brain">
+                <div class="neural-network"></div>
+            </div>
+            <p>Initializing AI Portfolio...</p>
         </div>
-    </header>
+    </div>
 
-    <main class="container mx-auto px-6 py-12">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <span class="logo-text">MAG</span>
+                    <span class="logo-subtitle">AI Engineer</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-        <!-- About Section -->
-        <section id="about" class="mb-16">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-3/4 md:pr-12">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Machine Learning Engineer & Generative AI Specialist</h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        Highly skilled Machine Learning Engineer with nearly 3 years of experience building end-to-end AI systems. Specializes in fine-tuning and optimizing Large Language Models (LLMs) for complex financial applications, achieving up to a 70% reduction in computational costs using PEFT and reaching a 95% F-beta score in real-time fraud detection. Passionate about pushing the boundaries of Generative AI to create novel, scalable, and impactful solutions.
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="neural-network-bg"></div>
+            <div class="floating-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Muhammad Adel Gabr</span>
+                        <span class="title-roles">
+                            <span class="role active">Machine Learning Engineer</span>
+                            <span class="role">Generative AI Specialist</span>
+                            <span class="role">LLM Expert</span>
+                        </span>
+                    </h1>
+                    <p class="hero-description">
+                        Passionate about pushing the boundaries of AI to create innovative, scalable solutions. 
+                        Specializing in LLM fine-tuning, RAG systems, and building end-to-end ML pipelines 
+                        that drive real-world impact.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="mailto:MuhammadAdelGabr@gmail.com" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition">Contact Me</a>
-                        <a href="https://www.linkedin.com/in/muhammad-adel-gabr/" target="_blank" class="text-gray-600 hover:text-blue-600 p-2"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg></a>
-                        <a href="https://github.com/MuhammadAdelGabr" target="_blank" class="text-gray-600 hover:text-blue-600 p-2"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.578.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg></a>
-                         <a href="https://huggingface.co/MuhammadAdelGabr" target="_blank" class="text-gray-600 hover:text-blue-600 p-2">🤗</a>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="mb-16">
-            <h2 class="text-3xl font-bold section-title">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">Generative AI & LLMs</h3>
-                    <p class="text-gray-600">LLM Fine-Tuning (PEFT, Quantization), RAG, Prompt Engineering, LangChain, LlamaIndex, Hugging Face.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">Deep Learning & CV</h3>
-                    <p class="text-gray-600">PyTorch, TensorFlow, Keras, Computer Vision (OpenCV, Detectron2).</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">Core ML & Data Science</h3>
-                    <p class="text-gray-600">Scikit-learn, Pandas, NumPy, Supervised & Unsupervised Learning, NLP.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">MLOps</h3>
-                    <p class="text-gray-600">MLflow, Weights & Biases, DVC, Kubeflow, Airflow.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">Backend & API Development</h3>
-                    <p class="text-gray-600">FastAPI, Flask, Spring Boot, RESTful API Design.</p>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-3 text-blue-600">Cloud & DevOps</h3>
-                    <p class="text-gray-600">AWS (SageMaker, Bedrock), GCP (Vertex AI), Azure AI Studio, Docker, Kubernetes, CI/CD.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="mb-16">
-            <h2 class="text-3xl font-bold section-title">Work Experience</h2>
-            <div class="space-y-8">
-                <div class="card p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold">Machine Learning and Software Development Engineer</h3>
-                            <p class="text-md font-medium text-blue-600">DataGear</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
                         </div>
-                        <p class="text-gray-500">July 2024 - Present</p>
-                    </div>
-                    <ul class="list-disc list-inside mt-4 text-gray-600 space-y-2">
-                        <li>Fine-tuned an LLM on SQL and JSON data for anti-money laundering.</li>
-                        <li>Architected and built a "Machine Learning as a Service" platform.</li>
-                        <li>Developed a real-time AML fraud detection module using XGBoost (95% F-beta score).</li>
-                        <li>Established a full MLOps pipeline, reducing deployment cycles by 30%.</li>
-                    </ul>
-                </div>
-                <div class="card p-6">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-bold">Design Engineer</h3>
-                            <p class="text-md font-medium text-blue-600">Shaker Consultancy Group</p>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">F-beta Score</span>
                         </div>
-                        <p class="text-gray-500">September 2022 - June 2024</p>
-                    </div>
-                    <p class="mt-4 text-gray-600">Delivered scalable and functional engineering project designs, ensuring alignment with industry best practices and standards.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="mb-16">
-            <h2 class="text-3xl font-bold section-title">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">LLM Fine-Tuning for Financial Sentiment Analysis</h3>
-                    <p class="text-gray-600 mb-4">Fine-tuned a Llama-3-8b model, achieving a 15% F1-score improvement over GPT-3.5. Utilized PEFT with LoRA to cut computational costs by 70%.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag">LLM</span><span class="tag">Fine-Tuning</span><span class="tag">PEFT</span><span class="tag">PyTorch</span>
+                        <div class="stat">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Cost Reduction</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">Enterprise-Grade 'Chat with Your Data' System</h3>
-                    <p class="text-gray-600 mb-4">Developed a secure RAG pipeline for querying private documents. Implemented advanced chunking and prompt engineering to improve accuracy.</p>
-                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">Docker</span>
-                    </div>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">DeepGen: Multimodal Generative AI Framework</h3>
-                    <p class="text-gray-600 mb-4">Fine-tuned Stable Diffusion and implemented RLHF. Optimized inference with ONNX and TensorRT for 3x faster generation.</p>
-                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">Generative AI</span><span class="tag">Stable Diffusion</span><span class="tag">RLHF</span><span class="tag">TensorRT</span>
-                    </div>
-                </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold mb-2">NASA Turbofan Jet Engine Predictive Maintenance</h3>
-                    <p class="text-gray-600 mb-4">Built a pipeline for Remaining Useful Life (RUL) prediction, achieving 92% accuracy. Created an interactive Streamlit dashboard.</p>
-                     <div class="flex flex-wrap gap-2">
-                        <span class="tag">Predictive Maintenance</span><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">Streamlit</span>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <div class="ai-visualization">
+                            <div class="data-points"></div>
+                            <div class="connection-lines"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
 
-        <!-- Education Section -->
-        <section id="education">
-            <h2 class="text-3xl font-bold section-title">Education</h2>
-             <div class="space-y-8">
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold">Master of Computer Engineering (Artificial Intelligence)</h3>
-                    <p class="text-md font-medium text-blue-600">Mansoura University</p>
-                    <p class="text-gray-500">January 2025 - Present</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Driving Innovation Through Artificial Intelligence</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a highly skilled Machine Learning Engineer with nearly 3 years of experience 
+                        building end-to-end AI systems. My expertise lies in fine-tuning and optimizing 
+                        Large Language Models for complex financial applications, achieving remarkable 
+                        results including up to 70% reduction in computational costs using PEFT techniques.
+                    </p>
+                    <div class="achievements">
+                        <div class="achievement">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <h4>LLM Optimization</h4>
+                                <p>Specialized in fine-tuning Large Language Models with Parameter-Efficient techniques</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Fraud Detection</h4>
+                                <p>Achieved 95% F-beta score in real-time fraud detection systems</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-cogs"></i>
+                            <div>
+                                <h4>MLOps Excellence</h4>
+                                <p>Built scalable ML pipelines reducing deployment cycles by 30%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card p-6">
-                    <h3 class="text-xl font-bold">Bachelor of Engineering</h3>
-                    <p class="text-md font-medium text-blue-600">Mansoura University</p>
-                    <p class="text-gray-500">2017 - 2022</p>
+                <div class="about-skills-preview">
+                    <div class="skill-category">
+                        <h4>Core Expertise</h4>
+                        <div class="skill-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">LLM Fine-tuning</span>
+                            <span class="tag">RAG Systems</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">MLOps</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Hugging Face</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Comprehensive AI & ML Technology Stack</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Artificial Intelligence & ML</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">LLM Fine-Tuning (PEFT, Quantization)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">RAG & Prompt Engineering</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Deep Learning (PyTorch, TensorFlow)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Computer Vision</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MLOps (MLflow, DVC, Kubeflow)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Engineering</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">FastAPI & Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript/TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL & Databases</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker & Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS (SageMaker, Bedrock)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">GCP (Vertex AI)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Azure AI Studio</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD Pipelines</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Apache Spark</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">Building AI Solutions That Make a Difference</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2024 - Present</div>
+                        <h3>Machine Learning & Software Development Engineer</h3>
+                        <h4>DataGear</h4>
+                        <ul class="timeline-achievements">
+                            <li>Fine-tuned LLM on SQL and JSON data for anti-money laundering, creating a system to generate new detection logic from natural language prompts</li>
+                            <li>Architected and built a "Machine Learning as a Service" platform with FastAPI backend and Angular frontend</li>
+                            <li>Developed real-time AML fraud detection module using XGBoost, achieving 95% F-beta score</li>
+                            <li>Established full MLOps pipeline using MLflow and Docker, reducing deployment cycles by 30%</li>
+                            <li>Implemented customer segmentation using k-means clustering for improved marketing precision</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">MLflow</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2022 - June 2024</div>
+                        <h3>Design Engineer</h3>
+                        <h4>Shaker Consultancy Group</h4>
+                        <ul class="timeline-achievements">
+                            <li>Delivered scalable and functional engineering project designs</li>
+                            <li>Ensured alignment with industry best practices and standards</li>
+                            <li>Contributed to cross-functional teams for project success</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Engineering Design</span>
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Standards Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative AI Solutions & Research</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>LLM Fine-Tuning for Financial Sentiment Analysis</h3>
+                        <p>Achieved 15% improvement in F1-score over GPT-3.5 by fine-tuning Llama-3-8b model on proprietary financial news dataset. Utilized PEFT with LoRA to reduce computational costs by 70%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LLaMA-3</span>
+                            <span class="tech-tag">LoRA</span>
+                            <span class="tech-tag">PEFT</span>
+                            <span class="tech-tag">HuggingFace</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">15%</span>
+                                <span class="metric-label">F1-Score Improvement</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">70%</span>
+                                <span class="metric-label">Cost Reduction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise 'Chat with Your Data' System</h3>
+                        <p>Developed secure, scalable RAG solution for natural language queries on private documents. Engineered sophisticated pipeline to overcome hallucination and context retrieval issues.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Vector DB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>DeepGen: Multimodal Generative AI</h3>
+                        <p>Advanced text-to-image generation system using fine-tuned Stable Diffusion. Implemented RLHF to enhance quality and built synthetic data pipeline improving CV performance by 18%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Stable Diffusion</span>
+                            <span class="tech-tag">RLHF</span>
+                            <span class="tech-tag">ONNX</span>
+                            <span class="tech-tag">TensorRT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>NASA Turbofan Predictive Maintenance</h3>
+                        <p>Comprehensive ML pipeline for remaining useful life prediction. Applied multiple modeling approaches achieving 92% accuracy with 5-day lead time, reducing unplanned downtime by 40%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Time Series</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-subtitle">Continuous Learning in AI & Technology</p>
+            </div>
+            <div class="education-content">
+                <div class="education-formal">
+                    <h3>Formal Education</h3>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Master of Computer Engineering (AI)</h4>
+                            <p class="institution">Mansoura University</p>
+                            <p class="duration">January 2025 - Present</p>
+                            <p class="description">Specializing in generative AI, transformer models, and multimodal learning. Pre-master GPA: 3.9/4.0</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Bachelor of Engineering</h4>
+                            <p class="institution">Mansoura University</p>
+                            <p class="duration">2017 - 2022</p>
+                            <p class="description">Accumulative grade: 74%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications">
+                    <h3>Key Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <i class="fab fa-aws"></i>
+                            <h4>Introducing Generative AI with AWS</h4>
+                            <p>Udacity • 2025</p>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-robot"></i>
+                            <h4>Generative Artificial Intelligence</h4>
+                            <p>Sprints & ORM (UN Migration) • 2025</p>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fab fa-microsoft"></i>
+                            <h4>IBM AI SkillsBuild Program</h4>
+                            <p>IBM • 2025</p>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-brain"></i>
+                            <h4>LLM Engineering: Master AI</h4>
+                            <p>Udemy • 2025</p>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Complete Data Science Bootcamp</h4>
+                            <p>Udemy • 2025</p>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-eye"></i>
+                            <h4>AI and Computer Vision</h4>
+                            <p>NTI & Huawei • 2024-2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Ready to collaborate on innovative AI solutions</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Cairo / Mansoura, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:MuhammadAdelGabr@gmail.com">MuhammadAdelGabr@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/qr/QZCLR5KV7B7ZH1">+20 102 317 6078</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/muhammadadelgabr/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.github.com/muhammadadelgabr/" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.huggingface.co/muhammadadelgabr/" target="_blank" class="social-link">
+                    <i class="fas fa-brain"></i>
+                    <span>HuggingFace</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-4 text-center">
-            <p>&copy; 2025 Muhammad Adel Gabr. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Muhammad Adel Gabr. All rights reserved.</p>
+                <p>Built with passion for AI and innovation</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html> 
